@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 9 - Giftcard</title>
+	<style>
+		h2 {
+			color:#d56912;
+			margin: 20px 0px 0px 0px; 
+			padding: 0px 0px 0px 0px;
+		}
+		p {
+			margin: 5px 0px 0px 0px; 
+			font-family:"Comic Sans MS";
+		}
+		button {
+			background-color: white;
+			color: black;
+			border: 3px solid #4CAF50;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 18px;
+			border-radius: 12px;
+		}
+		button:hover {
+			background-color: #4CAF50;
+			color: white;
+		}
+		a.button {
+			background-color: #f6dcc8;
+			color: black;
+			border: 3px solid #d56912;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 18px;
+			border-radius: 12px;
+		}
+		a.button:hover {
+			background-color: #d56912;
+			color: white;
+		}
+	</style>
+	<script language="javascript" type="text/javascript">
+		function playMew(){
+			var audio = document.getElementById("meow");
+			audio.play();
+        }
+		function playPurr(){
+			var audio = document.getElementById("purr");
+			audio.play();
+        }
+	</script>
+</head>
+<body style="font-family:verdana;">
+	<table>
+	  <tr>
+		<td>
+			<p style="font-size:1000%; text-align:right;"><b>Happy</b></p>
+			<img src="cat-day.png"/>
+		</td>
+		<td>
+			<img src="cat-day2.png"/><br/>
+			<button onclick="playMew()">meow!</button>
+			<button onclick="playPurr()">purr...</button>
+			<a href="Lab9_summary.html" class="button">Back to main page</a>
+			<audio id="meow" src="Cat-meow-6.mp3" ></audio>
+			<audio id="purr" src="Cat-purring-3.mp3" ></audio>
+		</td>
+	  </tr>
+	</table>
+	
+</body>
+</html>

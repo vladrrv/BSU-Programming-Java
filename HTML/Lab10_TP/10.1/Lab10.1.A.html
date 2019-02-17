@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 10 - A</title>
+	<style>
+		table {
+			border-spacing: 0px;
+      background-color: #efefef;
+		}
+		h2 {
+			color:#d56912;
+			margin: 0px 0px 10px 0px;
+		}
+		p {
+			color:#634b38;
+			margin: 5px 0px 5px 0px;
+		}
+    fieldset {
+			color:#634b38;
+      display: block;
+      margin-left: 2px;
+      margin-right: 2px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding-left: 5px;
+      padding-right: 0px;
+      border: 2px groove (internal value);
+    }
+	</style>
+</head>
+<body style="font-family:verdana;">
+  <form>
+	<table>
+    <tr>
+      <td>
+        <h2 align="center">My form</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <label for="name_1">
+            <span><b>First Name: </b></span>
+          </label>
+          <input type="text" id="name_1" name="name_1">
+        </p>
+        <p>
+          <label for="name_2">
+            <span><b>Last Name: </b></span>
+          </label>
+          <input type="text" id="name_2" name="name_2">
+        </p>
+        <fieldset>
+          <legend><b>Gender</b></legend>
+          <ul style="list-style: none;">
+            <li>
+              <label for="male">
+                <input type="radio" id="male" name="gender" value="m">
+                Male
+              </label>
+            </li>
+            <li>
+              <label for="female">
+                <input type="radio" id="female" name="gender" value="f">
+                Female
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <p>
+          <label for="photo">
+            <span><b>Photo: </b></span>
+          </label>
+          <input type="file" id="photo" name="photo">
+        </p>
+        <fieldset>
+        <legend><b>Skills</b></legend>
+        <p>
+          <ul style="list-style: none;">
+            <li><input type="checkbox">C/C++</input></li>
+            <li><input type="checkbox">Java</input></li>
+            <li><input type="checkbox">Python</input></li>
+            <li><input type="checkbox">C#</input></li>
+            <li><input type="checkbox">JavaScript</input></li>
+            <li><input type="checkbox">HTML</input></li>
+          </ul>
+        </p>
+        </fieldset>
+        <button>Submit <img src="ok.png"></button>
+        <button>Reset <img src="reset.png"></button>
+      </td>
+    </tr>
+	</table>
+  </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 10.1</title>
+	<style>
+		a.button {
+			background-color: #f6dcc8;
+			color: black;
+			border: 3px solid #d56912;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 18px;
+			border-radius: 12px;
+		}
+	</style>
+  <script language="javascript" type="text/javascript">
+    function hov(btn) {
+      btn.style.background = '#d56912';
+      btn.style.color = 'white';
+    };
+    function out(btn) {
+      btn.style.background = '#f6dcc8';
+      btn.style.color = 'black';
+    };
+  </script>
+</head>
+<body style="font-family:verdana;">
+  <h1 align="center">Lab 10.1</h1>
+  <p align="center">
+  <a href="Lab10.1.A.html" class="button" onmouseover="hov(this)" onmouseout="out(this)">Task A</a>
+  <a href="Lab10.1.B.html" class="button" onmouseover="hov(this)" onmouseout="out(this)">Task B</a>
+  <a href="Lab10.1.C.html" class="button" onmouseover="hov(this)" onmouseout="out(this)">Task C</a>
+  </p>
+</body>
+</html>
