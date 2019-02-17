@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane fx:id="pane" prefHeight="333.0" prefWidth="217.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <Tab text="Linear">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="418.0">
+            <VBox layoutX="7.0" layoutY="3.0" prefHeight="304.0" prefWidth="203.0">
+                <TitledPane animated="false" text="Input">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="121.0" prefWidth="200.0">
+                        <TilePane layoutX="11.0" layoutY="14.0" prefHeight="102.0" prefWidth="178.0">
+                            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="87.0" text="First Member" />
+                            <TextField fx:id="inputA0" prefHeight="25.0" prefWidth="67.0" />
+                            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="83.0" text="Difference" />
+                            <TextField fx:id="inputD" prefHeight="25.0" prefWidth="67.0" />
+                            <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="83.0" text="How Many" textAlignment="RIGHT" wrapText="true" />
+                            <TextField fx:id="nL" prefHeight="25.0" prefWidth="67.0" />
+                            <Label fx:id="errorL" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="83.0" text="Label" textAlignment="RIGHT" textFill="RED" />
+                            <Button defaultButton="true" mnemonicParsing="false" onAction="#generateLinear" prefHeight="25.0" prefWidth="85.0" text="Generate" />
+                        </TilePane>
+                    </AnchorPane>
+                </TitledPane>
+                <TitledPane animated="false" prefHeight="112.0" prefWidth="203.0" text="Output">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="63.0" prefWidth="200.0">
+                        <TextArea fx:id="outputL" editable="false" layoutX="5.0" layoutY="8.0" prefHeight="71.0" prefWidth="191.0" wrapText="true">
+                            <font>
+                                <Font name="Consolas" size="10.0" />
+                            </font>
+                        </TextArea>
+                    </AnchorPane>
+                </TitledPane>
+                <ToolBar prefHeight="40.0" prefWidth="204.0">
+                    <Button mnemonicParsing="false" onAction="#sumLinear" text="Sum" />
+                    <TextField fx:id="sumL" editable="false" prefHeight="25.0" prefWidth="66.0" />
+                    <Button mnemonicParsing="false" onAction="#saveLinear" text="Save to File" />
+                </ToolBar>
+            </VBox>
+        </AnchorPane>
+    </Tab>
+    <Tab text="Exponential">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="418.0">
+            <VBox layoutX="7.0" layoutY="3.0" prefHeight="304.0" prefWidth="203.0">
+                <TitledPane animated="false" text="Input">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="121.0" prefWidth="200.0">
+                        <TilePane layoutX="11.0" layoutY="14.0" prefHeight="102.0" prefWidth="178.0">
+                            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="87.0" text="First Member" />
+                            <TextField fx:id="inputB0" prefHeight="25.0" prefWidth="67.0" />
+                            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="83.0" text="Difference" />
+                            <TextField fx:id="inputQ" prefHeight="25.0" prefWidth="67.0" />
+                            <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="83.0" text="How Many" textAlignment="RIGHT" wrapText="true" />
+                            <TextField fx:id="nE" prefHeight="25.0" prefWidth="67.0" />
+                            <Label fx:id="errorE" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="83.0" text="Label" textAlignment="RIGHT" textFill="RED" />
+                            <Button defaultButton="true" mnemonicParsing="false" onAction="#generateExponential" prefHeight="25.0" prefWidth="85.0" text="Generate" />
+                        </TilePane>
+                    </AnchorPane>
+                </TitledPane>
+                <TitledPane animated="false" prefHeight="112.0" prefWidth="203.0" text="Output">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="63.0" prefWidth="200.0">
+                        <TextArea fx:id="outputE" editable="false" layoutX="5.0" layoutY="8.0" prefHeight="71.0" prefWidth="191.0" wrapText="true">
+                            <font>
+                                <Font name="Consolas" size="10.0" />
+                            </font>
+                        </TextArea>
+                    </AnchorPane>
+                </TitledPane>
+                <ToolBar prefHeight="40.0" prefWidth="204.0">
+                    <Button mnemonicParsing="false" onAction="#sumExponential" text="Sum" />
+                    <TextField fx:id="sumE" editable="false" prefHeight="25.0" prefWidth="66.0" />
+                    <Button mnemonicParsing="false" onAction="#saveExponential" text="Save to File" />
+                </ToolBar>
+            </VBox>
+        </AnchorPane>
+    </Tab>
+</TabPane>

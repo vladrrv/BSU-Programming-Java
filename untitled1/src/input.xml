@@ -1,0 +1,38 @@
+<?xml version = "1.0"?>
+<bookstore address = "Nemiga" number = "10">
+    <book id = "324523">
+        <author>Márquez</author>
+        <name>One Hundred Years of Solitude</name>
+        <price>23.40</price>
+    </book>
+
+    <book id = "200138">
+        <author>Lee</author>
+        <name>To Kill a Mockingbird</name>
+        <price>15.82</price>
+    </book>
+
+    <book id = "490102">
+        <author>Hemingway</author>
+        <name>A Moveable Feast</name>
+        <price>14.45</price>
+    </book>
+
+    <book id = "250126">
+        <author>Eco</author>
+        <name>The Name of the Rose</name>
+        <price>34.02</price>
+    </book>
+
+    <book id = "3617993">
+        <author>Márquez</author>
+        <name>Love in the Time of Cholera</name>
+        <price>16.73</price>
+    </book>
+
+    <book id = "324523">
+        <author>Márquez</author>
+        <name>One Hundred Years of Solitude</name>
+        <price>14.34</price>
+    </book>
+</bookstore>

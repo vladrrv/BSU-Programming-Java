@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.34235668789808915" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="630.0" prefHeight="450.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <VBox layoutX="38.0" layoutY="26.0" prefHeight="135.0" prefWidth="111.0" spacing="5.0" style="-fx-border-width: 1; -fx-border-insets: 2; -fx-border-style: dashed; -fx-border-color: gray; -fx-border-radius: 3 3 5 5;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="3.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#open" prefHeight="25.0" prefWidth="60.0" text="Open" />
+                        <Button mnemonicParsing="false" onAction="#convert" text="Convert" />
+                        <CheckBox fx:id="checkBox" mnemonicParsing="false" text="Check" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="saveButton" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="60.0" text="Save" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <RadioButton fx:id="rbDOM" mnemonicParsing="false" onAction="#toggle" selected="true" text="DOM">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="parserType" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rbBinary" mnemonicParsing="false" onAction="#toggle" text="Binary" toggleGroup="$parserType" />
+                  <RadioButton fx:id="rbSAX" mnemonicParsing="false" onAction="#toggle" text="SAX" toggleGroup="$parserType" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <TitledPane layoutY="160.0" prefHeight="284.0" prefWidth="212.0" text="Attributes" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="160.0">
+               <content>
+                  <VBox prefHeight="225.0" prefWidth="185.0">
+                     <children>
+                        <Label text="Order ID" />
+                        <TextField fx:id="tfID" onAction="#setOrderID" />
+                        <Label text="Ship To" />
+                        <TextField fx:id="tfShipTo" onAction="#setShipTo" />
+                        <Label text="Address" />
+                        <TextField fx:id="tfAddress" onAction="#setAddress" />
+                        <Label text="City" />
+                        <TextField fx:id="tfCity" onAction="#setCity" />
+                        <Label text="Country" />
+                        <TextField fx:id="tfCountry" onAction="#setCountry" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="417.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#add" text="Add" />
+                  <Button mnemonicParsing="false" onAction="#remove" text="Remove" />
+              </items>
+            </ToolBar>
+            <TitledPane collapsible="false" layoutY="40.0" prefHeight="355.0" prefWidth="445.0" text="Items" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+               <content>
+                  <TableView fx:id="tableView" editable="true" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="titleColumn" prefWidth="165.0" text="Title" />
+                      <TableColumn fx:id="quantityColumn" prefWidth="74.0" text="Quantity" />
+                        <TableColumn fx:id="priceColumn" prefWidth="74.0" text="Price" />
+                    </columns>
+                  </TableView>
+               </content>
+            </TitledPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

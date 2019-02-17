@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane prefHeight="200.0" prefWidth="400.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LabGUI">
+   <tabs>
+       <Tab text="4.1">
+         <content>
+            <GridPane hgap="5.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="147.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="199.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="35.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="52.0" minHeight="9.0" prefHeight="17.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="122.0" minHeight="10.0" prefHeight="122.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ComboBox fx:id="comboBox" onAction="#textTyped" prefWidth="150.0" GridPane.rowIndex="1" />
+                  <TextField fx:id="textField" onAction="#textTyped" onKeyTyped="#textTyped" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Select format" />
+                  <Label text="Enter text" GridPane.columnIndex="1" />
+                  <Label fx:id="label" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </Tab>
+       <Tab text="4.2">
+         <content>
+            <GridPane hgap="5.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="188.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="70.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="224.0" minWidth="10.0" prefWidth="122.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="81.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="152.0" minHeight="10.0" prefHeight="145.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Enter text" />
+                  <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                  <Label text="Dates in text" GridPane.columnIndex="2" />
+                  <ListView fx:id="list" prefHeight="140.0" prefWidth="142.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#getDates" text="Get dates" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>

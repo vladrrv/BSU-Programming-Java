@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="303.0" prefWidth="387.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <left>
+      <BorderPane prefHeight="369.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <Label text="Log" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <TextArea fx:id="logArea" editable="false" prefHeight="364.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </left>
+   <center>
+      <Label fx:id="label" text="L" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="120.0" />
+         </font>
+      </Label>
+   </center>
+</BorderPane>

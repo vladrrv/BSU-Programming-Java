@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<shiporder address="Some Street 23" city="Minsk" country="Belarus" orderid="15420" shipto="Kirill Ematinov">	<item>
+		<title>dsnhsn</title>
+		<quantity>1</quantity>
+		<price>10.9</price>
+	</item>
+	<item>
+		<title>srnj</title>
+		<quantity>5</quantity>
+		<price>0.0</price>
+	</item>
+	<item>
+		<title>dzhngfb</title>
+		<quantity>5</quantity>
+		<price>100.0</price>
+	</item>
+</shiporder>

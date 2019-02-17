@@ -1,0 +1,6 @@
+audi red diesel 20 3
+mercedes blue oil 10 2
+mercedes black oil 10 2
+chevrolet green oil 30 3
+mercedes black oil 10 2
+ford black oil 40 4

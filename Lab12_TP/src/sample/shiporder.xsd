@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="stringtype">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+    <xs:simpleType name="nametype">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-z]*\s[A-Z][a-z]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="inttype">
+        <xs:restriction base="xs:positiveInteger"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="dectype">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="orderidtype">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:maxInclusive value="999999"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="countrytype">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="USA"/>
+            <xs:enumeration value="Belarus"/>
+            <xs:enumeration value="China"/>
+            <xs:enumeration value="Russia"/>
+            <xs:enumeration value="Germany"/>
+            <xs:enumeration value="France"/>
+            <xs:enumeration value="Japan"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="itemtype">
+        <xs:sequence>
+            <xs:element name="title" type="stringtype"/>
+            <xs:element name="quantity" type="inttype"/>
+            <xs:element name="price" type="dectype"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="shipordertype">
+        <xs:sequence>
+            <xs:element name="item" maxOccurs="unbounded" type="itemtype"/>
+        </xs:sequence>
+        <xs:attribute name="orderid" type="orderidtype" use="required"/>
+        <xs:attribute name="shipto" type="nametype" use="required"/>
+        <xs:attribute name="country" type="countrytype" use="required"/>
+        <xs:attribute name="city" type="stringtype" use="required"/>
+        <xs:attribute name="address" type="stringtype" use="required"/>
+    </xs:complexType>
+
+    <xs:element name="shiporder" type="shipordertype"/>
+
+</xs:schema>
